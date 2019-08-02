@@ -15,7 +15,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh "pwd"
-                sh "/usr/bin/go build /var/lib/jenkins/workspace/PipeLineDemo/go_jen/main.go" 
+                sh "/usr/bin/go build main.go" 
             }
         }
     }
