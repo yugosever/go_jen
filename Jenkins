@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Clone repo') { 
             steps {
-                sh "rm -rf go_jen"
                 sh "pwd"
             }
         }
