@@ -1,0 +1,23 @@
+pipeline {    
+    agent any 
+    stages {
+        stage('Clone repo') { 
+            steps {
+                sh "rm -rf go_jen"
+                sh "pwd"
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh "echo TEST TEST TEST"
+                sh "pwd"
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh "pwd"
+                sh "/usr/bin/go build /var/lib/jenkins/workspace/PipeLineDemo/go_jen/main.go" 
+            }
+        }
+    }
+}
